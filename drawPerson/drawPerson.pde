@@ -5,7 +5,8 @@ void setup() {
   background(255);
   drawPerson();
   drawShirt(color(204, 153, 0));
-  drawCat(130, 70, 3, color(50, 50, 50));
+  drawCat(100, 70, 5, color(200, 100, 100));
+  drawHat("top");
 }
 
 void drawPerson() {
@@ -41,6 +42,13 @@ void drawCat(int x, int y, int size, color catColor) {
   fill(color(0, 0, 0));
   ellipse(x-(total*7/10), y-(total/10), total/20, total/20); // left eye
   ellipse(x-(total/2), y-(total/10), total/20, total/20); // right eye
+}
 
-  
+void drawHat(String type) {
+  if (type.equals("top")) {
+    fill(color(0, 0, 0));
+    stroke(0);
+    ellipse(190, 90, 80, 20);
+    rect(160, 40, 60, 50, 4);
+  }
 }
