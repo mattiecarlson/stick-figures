@@ -56,7 +56,7 @@ void drawHat(String type) {
 
 void drawBaseballHat() {
   fill(color(0, 255, 255));
-  stroke(0);
+  stroke(color(0, 255, 255));
   ellipse(200, 110, 100, 10);
   arc(190, 120, 80, 80, PI+ .2, PI  * 2 - .2, CHORD);
 }
