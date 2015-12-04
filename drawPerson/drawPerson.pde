@@ -22,11 +22,10 @@ void drawShirt(color shirtColor) {
   stroke(shirtColor);
   rect(160, 175, 60, 20, 7); // sleeves
   rect(170, 175, 40, 70, 7); // body of shirt
-  drawPictureOnShirt();
 }
 
 void drawPictureOnShirt() {
-  PImage shirtPicture = loadImage("allthethings.png");
+  PImage shirtPicture = loadImage("yourFileName.png");
   image(shirtPicture, 172.5, 190);
 }
 
