@@ -5,8 +5,8 @@ void setup() {
   background(255);
   drawPerson();
   drawShirt(color(204, 153, 0));
-  drawCat(100, 70, 5, color(200, 100, 100));
-  drawHat("top");
+  drawHat("baseball");
+  //drawCat(200, 100, 7, color(50, 150, 50));
 }
 
 void drawPerson() {
@@ -46,9 +46,61 @@ void drawCat(int x, int y, int size, color catColor) {
 
 void drawHat(String type) {
   if (type.equals("top")) {
-    fill(color(0, 0, 0));
-    stroke(0);
-    ellipse(190, 90, 80, 20);
-    rect(160, 40, 60, 50, 4);
+    drawTopHat();
+  } else if (type.equals("wizard")) {
+    drawWizardHat();
+  } else if (type.equals("baseball")) {
+    drawBaseballHat();
   }
 }
+
+void drawBaseballHat() {
+  fill(color(0, 255, 255));
+  stroke(0);
+  ellipse(200, 110, 100, 10);
+  arc(190, 120, 80, 80, PI+ .2, PI  * 2 - .2, CHORD);
+}
+
+void drawTopHat() {
+  fill(color(0, 0, 0));
+  stroke(0);
+  ellipse(190, 90, 80, 20); // bottom
+  rect(160, 40, 60, 50, 4); // top
+}
+
+void drawWizardHat() {
+  fill(color(160, 32, 240)); 
+  stroke(0);
+  triangle(150, 110, 230, 110, 190, 20);
+  fill(color(120, 50, 240)); 
+  stroke(color(120, 50, 240));
+  triangle(160, 100, 220, 100, 190, 40);
+  fill(color(120, 50, 200)); 
+  stroke(color(120, 50, 200));
+  triangle(180, 80, 200, 80, 190, 60);
+  stroke(0, 0, 0);
+  fill(color(255, 255, 0));
+  star(190, 20, 20, 5, 5);
+}
+
+// This method was taken from the Processing official website
+void star(float x, float y, float radius1, float radius2, int npoints) {
+  float angle = TWO_PI / npoints;
+  float halfAngle = angle/2.0;
+  beginShape();
+  for (float a = 0; a < TWO_PI; a += angle) {
+    float sx = x + cos(a) * radius2;
+    float sy = y + sin(a) * radius2;
+    vertex(sx, sy);
+    sx = x + cos(a+halfAngle) * radius1;
+    sy = y + sin(a+halfAngle) * radius1;
+    vertex(sx, sy);
+  }
+  endShape(CLOSE);
+}
+
+/*
+Potential method ideas:
+drawSnowMan
+drawBackground
+*/
