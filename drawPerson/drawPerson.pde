@@ -24,8 +24,8 @@ void drawShirt(color shirtColor) {
   rect(170, 175, 40, 70, 7); // body of shirt
 }
 
-void drawPictureOnShirt() {
-  PImage shirtPicture = loadImage("chooseAFileName.png");
+void drawPictureOnShirt(String filename) {
+  PImage shirtPicture = loadImage(filename);
   image(shirtPicture, 172.5, 190);
 }
 
