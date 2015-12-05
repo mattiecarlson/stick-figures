@@ -9,7 +9,7 @@ void setup() {
 
 void drawPerson() {
   //Activity 1 code goes here
-  
+
 }
 
 void decoratePerson() {
@@ -26,7 +26,27 @@ void decoratePerson() {
 
 
 
+void drawEyes(String filename) {
+ PImage eyes = loadImage(filename);
+ // to use update width, height, and positions
+ int eyesWidth = 0;
+ int eyesHeight = 0;
+ int horizontalPosition = 0;
+ int verticalPosition = 0;
+ eyes.resize(eyesWidth, eyesHeight);
+ image(eyes, horizontalPosition, verticalPosition);
+}
 
+void drawMouth(String filename) {
+ PImage mouth = loadImage(filename);
+ // to use update width, height, and positions
+ int mouthWidth = 0;
+ int mouthHeight = 0;
+ int horizontalPosition = 0;
+ int verticalPosition = 0;
+ mouth.resize(mouthWidth, mouthHeight);
+ image(mouth, horizontalPosition, verticalPosition);
+}
 
 void drawShirt(color shirtColor) {
   fill(shirtColor);
