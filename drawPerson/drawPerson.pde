@@ -3,17 +3,21 @@ void setup() {
   stroke(0);     // Set line drawing color to white
   frameRate(30);
   background(255);
+
   drawPerson();
   decoratePerson();
+  save("person.png");
 }
 
 void drawPerson() {
   //Activity 1 code goes here
 
+
 }
 
 void decoratePerson() {
   //Activity 2 code goes here
+
 }
 
 
@@ -29,10 +33,10 @@ void decoratePerson() {
 void drawEyes(String filename) {
  PImage eyes = loadImage(filename);
  // to use update width, height, and positions
- int eyesWidth = 0;
- int eyesHeight = 0;
- int horizontalPosition = 0;
- int verticalPosition = 0;
+ int eyesWidth = 30;
+ int eyesHeight = 30;
+ int horizontalPosition = 175;
+ int verticalPosition = 95;
  eyes.resize(eyesWidth, eyesHeight);
  image(eyes, horizontalPosition, verticalPosition);
 }
@@ -40,10 +44,10 @@ void drawEyes(String filename) {
 void drawMouth(String filename) {
  PImage mouth = loadImage(filename);
  // to use update width, height, and positions
- int mouthWidth = 0;
- int mouthHeight = 0;
- int horizontalPosition = 0;
- int verticalPosition = 0;
+ int mouthWidth = 30;
+ int mouthHeight = 30;
+ int horizontalPosition = 175;
+ int verticalPosition = 125;
  mouth.resize(mouthWidth, mouthHeight);
  image(mouth, horizontalPosition, verticalPosition);
 }
