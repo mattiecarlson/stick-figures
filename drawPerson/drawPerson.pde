@@ -4,7 +4,7 @@ void setup() {
   frameRate(30);
   background(255);
   drawPerson();
-  drawShirt(color(204, 153, 0));
+  drawShirt(color(20, 0, 0));
   drawHat("baseball");
   //drawCat(200, 100, 7, color(50, 150, 50));
 }
@@ -25,8 +25,36 @@ void drawShirt(color shirtColor) {
 }
 
 void drawPictureOnShirt() {
-  PImage shirtPicture = loadImage("yourFileName.png");
+  PImage shirtPicture = loadImage("storm.png");
   image(shirtPicture, 172.5, 190);
+}
+
+void drawStarsOnShirtWithLoops() { // uses nested loops: ADVANCED
+  
+  int numberOfRows = 0;
+  int numberOfStarsPerRow = 0;
+  
+  int starWidth = 10;
+  int starHeight = 10;
+  
+  int horizontalStartingLocation = 170; // this is where the shirt starts horizontally
+  int horizontalCurrentLocation = horizontalStartingLocation;
+
+  int verticalStartingLocation = 175; // this is where the shirt starts vertically
+  int verticalCurrentLocation = verticalStartingLocation;
+  
+  for (int row = 0; row < numberOfRows; row++) {
+    
+    for (int col = 0; col < numberOfStarsPerRow; col++) {
+      
+      PImage star = loadImage("star.png");
+      image(star,horizontalCurrentLocation,verticalCurrentLocation);
+
+    }
+    horizontalCurrentLocation = horizontalStartingLocation;
+
+  }
+  
 }
 
 void drawCat(int x, int y, int size, color catColor) {
