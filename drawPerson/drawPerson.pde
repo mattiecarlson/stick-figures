@@ -4,18 +4,29 @@ void setup() {
   frameRate(30);
   background(255);
   drawPerson();
-  drawShirt(color(20, 0, 0));
-  drawHat("baseball");
-  //drawCat(200, 100, 7, color(50, 150, 50));
+  decoratePerson();
 }
 
 void drawPerson() {
-  ellipse(190, 120, 80, 80); // head
-  line(190, 160, 190, 250); // body
-  line(190, 250, 230, 300); // right leg
-  line(190, 250, 150, 300); // left leg
-  line(150, 185, 230, 185); // arms
+  //Activity 1 code goes here
+  
 }
+
+void decoratePerson() {
+  //Activity 2 code goes here
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 void drawShirt(color shirtColor) {
   fill(shirtColor);
