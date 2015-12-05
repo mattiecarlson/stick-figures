@@ -30,10 +30,7 @@ void drawPictureOnShirt() {
 }
 
 void drawStarsOnShirtWithLoops() { // uses nested loops: ADVANCED
-  
-  int numberOfRows = 0;
-  int numberOfStarsPerRow = 0;
-  
+  PImage star = loadImage("star.png");
   int starWidth = 10;
   int starHeight = 10;
   
@@ -43,18 +40,15 @@ void drawStarsOnShirtWithLoops() { // uses nested loops: ADVANCED
   int verticalStartingLocation = 175; // this is where the shirt starts vertically
   int verticalCurrentLocation = verticalStartingLocation;
   
-  for (int row = 0; row < numberOfRows; row++) {
-    
-    for (int col = 0; col < numberOfStarsPerRow; col++) {
-      
-      PImage star = loadImage("star.png");
-      image(star,horizontalCurrentLocation,verticalCurrentLocation);
-
-    }
-    horizontalCurrentLocation = horizontalStartingLocation;
-
-  }
+  int numberOfRows = 0;
+  int numberOfStarsPerRow = 0;
   
+  for (int row = 0; row < numberOfRows; row++) {   
+    for (int col = 0; col < numberOfStarsPerRow; col++) {     
+      image(star, horizontalCurrentLocation, verticalCurrentLocation);
+    }
+    horizontalCurrentLocation = horizontalStartingLocation;   
+  }
 }
 
 void drawCat(int x, int y, int size, color catColor) {
