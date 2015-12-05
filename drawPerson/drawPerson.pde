@@ -25,7 +25,7 @@ void drawShirt(color shirtColor) {
 }
 
 void drawPictureOnShirt() {
-  PImage shirtPicture = loadImage("storm.png");
+  PImage shirtPicture = loadImage("chooseAFileName.png");
   image(shirtPicture, 172.5, 190);
 }
 
